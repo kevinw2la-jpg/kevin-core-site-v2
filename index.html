@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <title>Kevin Core® | Premium Software Marketplace</title>
+    <meta name="description" content="Kevin Core® — The premier Discord server for buying elite bots, scripts, tools and cheats. Verified sellers. Instant delivery." />
+
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kevin Core® | Premium Software Marketplace" />
+    <meta property="og:description" content="The premier Discord server for buying elite bots, scripts, tools and cheats. Verified sellers. Instant delivery." />
+    <meta property="og:image" content="/opengraph.jpg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:site_name" content="Kevin Core®" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kevin Core® | Premium Software Marketplace" />
+    <meta name="twitter:description" content="The premier Discord server for buying elite bots, scripts, tools and cheats." />
+    <meta name="twitter:image" content="/opengraph.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/index-DAYgGky3.js"></script>
+    <link rel="stylesheet" crossorigin href="/index-CpQH4amr.css">
+    <style>
+      :root {
+        --kc-bg: hsl(0, 0%, 4%);
+        --kc-card: rgba(255, 255, 255, 0.03);
+        --kc-border: rgba(158, 158, 158, 0.18);
+        --kc-accent: #9e9e9e;
+        --kc-accent-2: #757575;
+        --kc-text-muted: rgba(255, 255, 255, 0.6);
+      }
+      #kc-verify-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 2147483647;
+        background: var(--kc-bg);
+        background-image:
+          radial-gradient(ellipse 60% 50% at 80% 0%, rgba(158, 158, 158, 0.18), transparent 60%),
+          radial-gradient(ellipse 50% 40% at 0% 100%, rgba(120, 120, 120, 0.07), transparent 60%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: white;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* Top brand bar — matches site nav */
+      #kc-verify-overlay .kc-nav {
+        width: 100%;
+        max-width: 1100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 8px 0;
+        flex-shrink: 0;
+      }
+      #kc-verify-overlay .kc-nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      #kc-verify-overlay .kc-logo {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        flex-shrink: 0;
+      }
+      #kc-verify-overlay .kc-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+      #kc-verify-overlay .kc-brand-text {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      #kc-verify-overlay .kc-brand-text span { color: var(--kc-accent); }
+
+      /* Layout — centered, responsive */
+      #kc-verify-overlay .kc-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+        align-items: center;
+        max-width: 1100px;
+        width: 100%;
+        flex: 1;
+        padding: 24px 0;
+      }
+      @media (min-width: 480px) {
+        #kc-verify-overlay { padding: 24px; }
+        #kc-verify-overlay .kc-wrap { gap: 40px; }
+      }
+      @media (min-width: 960px) {
+        #kc-verify-overlay { padding: 32px; }
+        #kc-verify-overlay .kc-wrap {
+          grid-template-columns: 1.05fr 0.95fr;
+          gap: 56px;
+        }
+      }
+
+      /* Left column — hero */
+      #kc-verify-overlay .kc-hero {
+        text-align: center;
+      }
+      @media (min-width: 960px) {
+        #kc-verify-overlay .kc-hero { text-align: left; }
+      }
+      #kc-verify-overlay .kc-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 13px;
+        background: rgba(158, 158, 158, 0.10);
+        border: 1px solid var(--kc-border);
+        border-radius: 999px;
+        color: var(--kc-accent);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      #kc-verify-overlay .kc-badge::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--kc-accent);
+        box-shadow: 0 0 8px rgba(158,158,158,0.6);
+      }
+      #kc-verify-overlay h1 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(34px, 7.5vw, 64px);
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        margin: 0 0 16px;
+      }
+      #kc-verify-overlay h1 em {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--kc-accent), var(--kc-accent-2));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      #kc-verify-overlay .kc-sub {
+        color: var(--kc-text-muted);
+        font-size: 15px;
+        line-height: 1.65;
+        max-width: 460px;
+        margin: 0 auto 28px;
+      }
+      @media (min-width: 960px) {
+        #kc-verify-overlay .kc-sub {
+          font-size: 16px;
+          margin: 0 0 32px;
+        }
+      }
+
+      /* Slider */
+      .kc-slider-card { max-width: 460px; margin: 0 auto; }
+      @media (min-width: 960px) { .kc-slider-card { margin: 0; } }
+      #kc-slider-track {
+        position: relative;
+        height: 60px;
+        background: rgba(0, 0, 0, 0.45);
+        border: 1px solid var(--kc-border);
+        border-radius: 999px;
+        overflow: hidden;
+        user-select: none;
+        touch-action: none;
+        width: 100%;
+      }
+      @media (min-width: 480px) { #kc-slider-track { height: 64px; } }
+      #kc-slider-fill {
+        position: absolute;
+        top: 0; left: 0; bottom: 0;
+        width: 0;
+        background: linear-gradient(90deg, rgba(158, 158, 158, 0.20), rgba(158, 158, 158, 0.45));
+      }
+      #kc-slider-text {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        pointer-events: none;
+      }
+      #kc-slider-handle {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 52px;
+        height: 52px;
+        background: linear-gradient(135deg, #9e9e9e 0%, #757575 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: grab;
+        box-shadow: 0 4px 18px rgba(158, 158, 158, 0.45);
+        transition: box-shadow 0.2s;
+      }
+      @media (min-width: 480px) {
+        #kc-slider-handle { width: 56px; height: 56px; }
+      }
+      #kc-slider-handle:active { cursor: grabbing; }
+      #kc-slider-handle svg {
+        width: 22px;
+        height: 22px;
+        stroke: #0a0a0a;
+        fill: none;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      #kc-verify-overlay.kc-success #kc-slider-fill {
+        background: linear-gradient(90deg, rgba(34, 197, 94, 0.4), rgba(34, 197, 94, 0.7));
+      }
+      #kc-verify-overlay.kc-success #kc-slider-handle {
+        background: #22c55e;
+        box-shadow: 0 0 30px #22c55e;
+      }
+      #kc-verify-overlay.kc-success #kc-slider-text {
+        color: white;
+      }
+
+      .kc-foot {
+        margin-top: 24px;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.4);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      @media (min-width: 960px) {
+        .kc-foot { justify-content: flex-start; font-size: 11.5px; letter-spacing: 1.2px; }
+      }
+      .kc-foot::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #22c55e;
+        box-shadow: 0 0 8px #22c55e;
+        animation: kc-pulse 2s infinite;
+      }
+      @keyframes kc-pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+
+      /* Right column — code card (matches site cards) */
+      .kc-code-card {
+        background: rgba(15, 15, 18, 0.85);
+        border: 1px solid var(--kc-border);
+        border-radius: 18px;
+        padding: 0;
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 12px;
+        line-height: 1.7;
+        box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6),
+                    0 0 0 1px rgba(158, 158, 158, 0.05);
+        overflow: hidden;
+        max-width: 420px;
+        width: 100%;
+        margin: 0 auto;
+        backdrop-filter: blur(8px);
+      }
+      @media (min-width: 480px) { .kc-code-card { font-size: 13px; } }
+      .kc-code-head {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .kc-dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+      }
+      .kc-dot.r { background: #ff5f57; }
+      .kc-dot.y { background: #febc2e; }
+      .kc-dot.g { background: #28c840; }
+      .kc-code-title {
+        margin-left: 10px;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 12px;
+      }
+      .kc-code-body {
+        padding: 18px 20px 20px;
+      }
+      .kc-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 0;
+        opacity: 0.35;
+        transition: opacity 0.4s, transform 0.4s;
+        transform: translateX(-4px);
+      }
+      .kc-row.kc-active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .kc-row.kc-done {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .kc-row .kc-icon {
+        flex: 0 0 18px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .kc-row.kc-active .kc-icon {
+        border-color: var(--kc-accent);
+        border-top-color: transparent;
+        animation: kc-spin 0.8s linear infinite;
+      }
+      .kc-row.kc-done .kc-icon {
+        border-color: #22c55e;
+        background: #22c55e;
+      }
+      .kc-row.kc-done .kc-icon::after {
+        content: "";
+        width: 5px;
+        height: 9px;
+        border: solid #0a0a0a;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg) translate(-1px, -1px);
+      }
+      @keyframes kc-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .kc-row .kc-label {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 13px;
+      }
+      .kc-row.kc-done .kc-label {
+        color: rgba(255, 255, 255, 0.55);
+      }
+      .kc-row .kc-value {
+        margin-left: auto;
+        color: var(--kc-accent);
+        font-size: 11px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .kc-row.kc-done .kc-value { opacity: 0.7; }
+
+      .kc-progress {
+        margin-top: 16px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .kc-progress-bar {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #9e9e9e, #757575);
+        border-radius: 999px;
+        transition: width 0.4s ease;
+      }
+      .kc-status {
+        margin-top: 14px;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 12px;
+        color: var(--kc-text-muted);
+        text-align: center;
+        letter-spacing: 0.5px;
+      }
+      .kc-status strong {
+        color: var(--kc-accent);
+        font-weight: 600;
+      }
+
+      .kc-scan-card { display: none; }
+      #kc-verify-overlay.kc-scanning .kc-scan-card { display: block; }
+      #kc-verify-overlay.kc-scanning .kc-slider-card { display: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <div id="kc-verify-overlay" role="dialog" aria-label="Human verification">
+      <div class="kc-nav">
+        <div class="kc-nav-brand">
+          <div class="kc-logo">
+            <img src="/logo.png" alt="Kevin Core" />
+          </div>
+          <div class="kc-brand-text">Kevin <span>Core®</span></div>
+        </div>
+      </div>
+
+      <div class="kc-wrap">
+        <div class="kc-hero">
+          <div class="kc-badge">Human Verification</div>
+          <h1>
+            Verify You're<br/>
+            <em>Human</em>
+          </h1>
+          <p class="kc-sub">
+            Before entering the marketplace, please complete a quick human check.
+            This helps us protect verified sellers and keep Kevin Core® bot-free.
+          </p>
+
+          <div class="kc-slider-card">
+            <div id="kc-slider-track">
+              <div id="kc-slider-fill"></div>
+              <div id="kc-slider-text">Slide to verify</div>
+              <div id="kc-slider-handle" aria-label="Drag to verify">
+                <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+              </div>
+            </div>
+            <div class="kc-foot">Protected by Kevin Core® · Anti-Bot v3.2</div>
+          </div>
+
+          <div class="kc-scan-card" style="max-width:460px; margin: 0 auto;">
+            <div class="kc-progress">
+              <div class="kc-progress-bar" id="kc-progress-bar"></div>
+            </div>
+            <div class="kc-status" id="kc-status">Initializing scan…</div>
+          </div>
+        </div>
+
+        <div class="kc-code-card" aria-hidden="true">
+          <div class="kc-code-head">
+            <span class="kc-dot r"></span>
+            <span class="kc-dot y"></span>
+            <span class="kc-dot g"></span>
+            <span class="kc-code-title">verification.scan</span>
+          </div>
+          <div class="kc-code-body" id="kc-scan-rows">
+            <div class="kc-row" data-step="0">
+              <span class="kc-icon"></span>
+              <span class="kc-label">Browser fingerprint</span>
+              <span class="kc-value">passed</span>
+            </div>
+            <div class="kc-row" data-step="1">
+              <span class="kc-icon"></span>
+              <span class="kc-label">Mouse trajectory analysis</span>
+              <span class="kc-value">human</span>
+            </div>
+            <div class="kc-row" data-step="2">
+              <span class="kc-icon"></span>
+              <span class="kc-label">TLS handshake check</span>
+              <span class="kc-value">valid</span>
+            </div>
+            <div class="kc-row" data-step="3">
+              <span class="kc-icon"></span>
+              <span class="kc-label">Behavioral signature</span>
+              <span class="kc-value">match</span>
+            </div>
+            <div class="kc-row" data-step="4">
+              <span class="kc-icon"></span>
+              <span class="kc-label">Issuing access token</span>
+              <span class="kc-value">granted</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("kc_verified") === "1") {
+            var ov0 = document.getElementById("kc-verify-overlay");
+            if (ov0) ov0.remove();
+            startGetStartedHider();
+            return;
+          }
+        } catch (e) {}
+
+        var track = document.getElementById("kc-slider-track");
+        var handle = document.getElementById("kc-slider-handle");
+        var fill = document.getElementById("kc-slider-fill");
+        var text = document.getElementById("kc-slider-text");
+        var overlay = document.getElementById("kc-verify-overlay");
+        var progressBar = document.getElementById("kc-progress-bar");
+        var statusEl = document.getElementById("kc-status");
+        var rows = document.querySelectorAll("#kc-scan-rows .kc-row");
+        if (!track || !handle || !fill || !text || !overlay) return;
+
+        var dragging = false;
+        var startX = 0;
+        var startLeft = 4;
+        var maxLeft = 4;
+
+        function recalcMax() {
+          maxLeft = track.clientWidth - handle.offsetWidth - 4;
+        }
+        recalcMax();
+        window.addEventListener("resize", recalcMax);
+        setTimeout(recalcMax, 60);
+
+        function setLeft(px) {
+          if (px < 4) px = 4;
+          if (px > maxLeft) px = maxLeft;
+          handle.style.left = px + "px";
+          var pct = ((px - 4) / (maxLeft - 4)) * 100;
+          fill.style.width = pct + "%";
+          if (pct > 95) {
+            overlay.classList.add("kc-success");
+            text.textContent = "Verified ✓";
+          } else if (pct > 10) {
+            text.textContent = "Keep sliding…";
+          } else {
+            text.textContent = "Slide to verify";
+          }
+          return pct;
+        }
+
+        function runScan() {
+          overlay.classList.add("kc-scanning");
+
+          // 5 steps over ~3.6s total
+          var steps = [
+            { label: "Checking browser fingerprint…",  duration: 720 },
+            { label: "Analyzing mouse trajectory…",     duration: 720 },
+            { label: "Verifying TLS handshake…",        duration: 680 },
+            { label: "Matching behavioral signature…",  duration: 700 },
+            { label: "Issuing secure access token…",    duration: 680 }
+          ];
+          var totalDuration = steps.reduce(function(s, st){ return s + st.duration; }, 0);
+          var elapsed = 0;
+          var i = 0;
+
+          function next() {
+            if (i > 0) rows[i - 1].classList.remove("kc-active"), rows[i - 1].classList.add("kc-done");
+            if (i >= steps.length) {
+              progressBar.style.width = "100%";
+              statusEl.innerHTML = '<strong>Access granted</strong> · Welcome to Kevin Core®';
+              setTimeout(finish, 600);
+              return;
+            }
+            var step = steps[i];
+            statusEl.textContent = step.label;
+            rows[i].classList.add("kc-active");
+            elapsed += step.duration;
+            progressBar.style.width = ((elapsed / totalDuration) * 95) + "%";
+            i++;
+            setTimeout(next, step.duration);
+          }
+          next();
+        }
+
+        function finish() {
+          try { localStorage.setItem("kc_verified", "1"); } catch (e) {}
+          overlay.style.transition = "opacity 0.5s ease";
+          overlay.style.opacity = "0";
+          setTimeout(function () {
+            overlay.remove();
+            startGetStartedHider();
+          }, 500);
+        }
+
+        function getX(e) {
+          if (e.touches && e.touches[0]) return e.touches[0].clientX;
+          return e.clientX;
+        }
+        function onDown(e) {
+          dragging = true;
+          startX = getX(e);
+          startLeft = parseFloat(handle.style.left || "4");
+          e.preventDefault();
+        }
+        function onMove(e) {
+          if (!dragging) return;
+          var dx = getX(e) - startX;
+          var pct = setLeft(startLeft + dx);
+          if (pct > 95) {
+            dragging = false;
+            setTimeout(runScan, 280);
+          }
+        }
+        function onUp() {
+          if (!dragging) return;
+          dragging = false;
+          var pct = ((parseFloat(handle.style.left || "4") - 4) / (maxLeft - 4)) * 100;
+          if (pct <= 95) {
+            var current = parseFloat(handle.style.left || "4");
+            var step = function () {
+              current -= Math.max(8, current / 8);
+              if (current <= 4) { setLeft(4); return; }
+              setLeft(current);
+              requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+          }
+        }
+
+        handle.addEventListener("mousedown", onDown);
+        handle.addEventListener("touchstart", onDown, { passive: false });
+        window.addEventListener("mousemove", onMove);
+        window.addEventListener("touchmove", onMove, { passive: false });
+        window.addEventListener("mouseup", onUp);
+        window.addEventListener("touchend", onUp);
+        window.addEventListener("touchcancel", onUp);
+      })();
+
+      function startGetStartedHider() {
+        function hide() {
+          var nodes = document.querySelectorAll("a, button, [role='button']");
+          for (var i = 0; i < nodes.length; i++) {
+            var el = nodes[i];
+            var t = (el.textContent || "").trim().toLowerCase();
+            if (t === "get started") el.style.display = "none";
+          }
+        }
+        hide();
+        var mo = new MutationObserver(hide);
+        mo.observe(document.body, { childList: true, subtree: true });
+      }
+    </script>
+</body>
+</html>
+  <!-- ===== CUSTOM OVERRIDES ===== -->
+  <style>
+    :root {
+      --kc-accent: #9e9e9e !important;
+      --kc-accent-2: #757575 !important;
+      --kc-border: rgba(158,158,158,0.18) !important;
+    }
+
+    /* ── Center nav links on desktop ── */
+    header nav.hidden {
+      position: absolute !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      pointer-events: auto !important;
+    }
+
+    /* ── Portfolio button: desktop only, home page only ── */
+    #kc-portfolio-link {
+      display: none !important;
+    }
+    @media (min-width: 768px) {
+      #kc-portfolio-link {
+        display: inline-flex !important;
+      }
+      #kc-portfolio-link[data-kc-route="other"] {
+        display: none !important;
+      }
+    }
+
+    /* ── Contact Me button icon wrap ── */
+    .kc-contact-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      pointer-events: none;
+    }
+
+    /* ── Dropdown wrapper ── */
+    .kc-dd-root { position: relative; display: inline-flex; }
+
+    .kc-dd-menu {
+      position: fixed; /* fixed so it never clips inside overflow:hidden parents */
+      min-width: 230px;
+      max-width: calc(100vw - 24px);
+      background: rgba(16,16,20,0.97);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 14px;
+      padding: 6px;
+      display: none;
+      flex-direction: column;
+      gap: 2px;
+      z-index: 99999;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.65);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      /* JS will set top/left after open */
+    }
+    .kc-dd-menu.open { display: flex; }
+
+    .kc-dd-item {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 10px 14px;
+      border-radius: 9px;
+      color: rgba(255,255,255,0.85);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.13s, color 0.13s;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .kc-dd-item:hover { background: rgba(255,255,255,0.07); color: #fff; }
+
+    .kc-dd-img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      flex-shrink: 0;
+      border-radius: 5px;
+    }
+    .kc-dd-wa {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      fill: #25D366;
+    }
+    .kc-dd-sep {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin: 3px 6px;
+    }
+
+    /* Small screens: slightly smaller text & padding */
+    @media (max-width: 400px) {
+      .kc-dd-item { font-size: 13px; padding: 9px 11px; }
+      .kc-dd-menu { min-width: 200px; border-radius: 12px; }
+    }
+  </style>
+
+  <script>
+  (function() {
+    /* ── Scroll-to-top on page navigation ── */
+    var _last = location.href;
+    new MutationObserver(function() {
+      if (location.href !== _last) { _last = location.href; window.scrollTo(0,0); }
+    }).observe(document.body, { childList: true, subtree: true });
+
+    /* ── Portfolio button SVG ── */
+    var PORTFOLIO_SVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>';
+
+    /* ── Inject Portfolio button in desktop header (far right) ── */
+    function injectPortfolioLink() {
+      if (document.getElementById('kc-portfolio-link')) return;
+      var header = document.querySelector('header');
+      if (!header) return;
+
+      var link = document.createElement('a');
+      link.id = 'kc-portfolio-link';
+      link.href = '/portfolio';
+      link.innerHTML = PORTFOLIO_SVG + 'Portfolio';
+      link.style.cssText = [
+        'align-items:center', 'gap:6px',
+        'padding:clamp(7px,0.9vw,10px) clamp(12px,1.6vw,18px)',
+        'background:rgba(158,158,158,.08)',
+        'border:1px solid rgba(158,158,158,.3)',
+        'border-radius:12px',
+        'color:#9E9E9E',
+        'font-family:"Plus Jakarta Sans",sans-serif',
+        'font-size:clamp(11px,0.95vw,13px)',
+        'font-weight:700',
+        'text-decoration:none',
+        'box-shadow:inset 0 0 20px rgba(158,158,158,.04)',
+        'transition:background .18s,border-color .18s,color .18s,transform .15s',
+        'white-space:nowrap',
+        'flex-shrink:0',
+        'cursor:pointer'
+      ].join(';');
+      link.addEventListener('mouseenter', function() {
+        this.style.background = 'rgba(158,158,158,.14)';
+        this.style.borderColor = 'rgba(158,158,158,.5)';
+        this.style.color = '#c0c0c0';
+        this.style.transform = 'translateY(-1px)';
+      });
+      link.addEventListener('mouseleave', function() {
+        this.style.background = 'rgba(158,158,158,.08)';
+        this.style.borderColor = 'rgba(158,158,158,.3)';
+        this.style.color = '#9E9E9E';
+        this.style.transform = '';
+      });
+      /* Append at end of header = far right */
+      header.appendChild(link);
+    }
+
+    /* ── Inject Portfolio button inside mobile menu (below Terms) ── */
+    function injectMobilePortfolio() {
+      if (document.getElementById('kc-mobile-portfolio')) return;
+      /* The mobile panel has a fixed position and rounded-2xl class */
+      var panel = document.querySelector('.fixed.top-\\[60px\\]');
+      if (!panel) return;
+      var itemsWrap = panel.querySelector('.flex.flex-col');
+      if (!itemsWrap) return;
+
+      var item = document.createElement('a');
+      item.id = 'kc-mobile-portfolio';
+      item.href = '/portfolio';
+      item.textContent = 'Portfolio';
+      /* Style identical to other mobile nav items (Products, Contact, Privacy, Terms) */
+      item.style.cssText = [
+        'display:flex', 'align-items:center',
+        'padding:12px 16px',
+        'border-radius:12px',
+        'font-family:var(--font-sans,"Plus Jakarta Sans",sans-serif)',
+        'font-size:15px', 'font-weight:500',
+        'color:rgba(255,255,255,.65)',
+        'text-decoration:none',
+        'transition:background .15s,color .15s',
+        'cursor:pointer',
+        'border:none',
+        'background:transparent'
+      ].join(';');
+      item.addEventListener('mouseenter', function() {
+        this.style.background = 'rgba(255,255,255,.05)';
+        this.style.color = 'rgba(255,255,255,.9)';
+      });
+      item.addEventListener('mouseleave', function() {
+        this.style.background = 'transparent';
+        this.style.color = 'rgba(255,255,255,.65)';
+      });
+      /* Append after last menu item (below Terms) */
+      itemsWrap.appendChild(item);
+    }
+
+    /* ── Show / hide portfolio elements based on current route ── */
+    function updatePortfolioVisibility() {
+      var isHome = location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html';
+      var link = document.getElementById('kc-portfolio-link');
+      if (link) {
+        link.setAttribute('data-kc-route', isHome ? 'home' : 'other');
+      }
+      var mobileItem = document.getElementById('kc-mobile-portfolio');
+      if (mobileItem) {
+        mobileItem.style.display = isHome ? '' : 'none';
+      }
+    }
+
+    /* ── Watch for mobile menu opening and route changes ── */
+    var _mobileObs = new MutationObserver(function() {
+      injectPortfolioLink();
+      injectMobilePortfolio();
+      updatePortfolioVisibility();
+    });
+    function initNav() {
+      injectPortfolioLink();
+      injectMobilePortfolio();
+      updatePortfolioVisibility();
+      _mobileObs.observe(document.body, { childList: true, subtree: true });
+    }
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initNav)
+      : initNav();
+
+    var DISCORD_URL   = 'https://discord.com/users/599633977715720212';
+    var INSTAGRAM_URL = 'https://instagram.com/wala.eddine.ghidhaoui';
+    var MAIL_URL      = 'mailto:Wala.eddine.ghidhaoui@gmail.com';
+    var WA_URL        = 'https://wa.me/21627382844';
+
+    /* ── Generic "Contact / Reach me" icon SVG (chat bubble) ── */
+    var CONTACT_BTN_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-right:6px;vertical-align:middle;display:inline-block;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
+
+    var WA_SVG = '<svg class="kc-dd-wa" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+
+    var ITEMS = [
+      { label: 'Discord',   href: DISCORD_URL,   html: '<img class="kc-dd-img" src="/discord-icon.png"   alt="Discord"/>'   },
+      { label: 'Instagram', href: INSTAGRAM_URL,  html: '<img class="kc-dd-img" src="/instagram-icon.png" alt="Instagram"/>' },
+      { label: 'Mail',      href: MAIL_URL,        html: '<img class="kc-dd-img" src="/gmail-icon.png"    alt="Mail"/>'       },
+      { label: 'WhatsApp',  href: WA_URL,          html: WA_SVG }
+    ];
+
+    function buildMenu() {
+      var menu = document.createElement('div');
+      menu.className = 'kc-dd-menu';
+      ITEMS.forEach(function(it, i) {
+        if (i > 0) { var sep = document.createElement('div'); sep.className = 'kc-dd-sep'; menu.appendChild(sep); }
+        var a = document.createElement('a');
+        a.href = it.href; a.target = '_blank'; a.rel = 'noopener noreferrer';
+        a.className = 'kc-dd-item';
+        a.innerHTML = it.html + it.label;
+        menu.appendChild(a);
+      });
+      return menu;
+    }
+
+    /* ── Smart position: keep menu inside viewport on all screen sizes ── */
+    function positionMenu(root, menu) {
+      var MARGIN = 8;
+      var rect = root.getBoundingClientRect();
+      var mw = menu.offsetWidth || 230;
+      var mh = menu.offsetHeight || 200;
+      var vw = window.innerWidth;
+      var vh = window.innerHeight;
+
+      /* Vertical: prefer below button, flip above if not enough space */
+      var top = rect.bottom + 8;
+      if (top + mh + MARGIN > vh && rect.top - mh - 8 > MARGIN) {
+        top = rect.top - mh - 8;
+      }
+      top = Math.max(MARGIN, Math.min(top, vh - mh - MARGIN));
+
+      /* Horizontal: center under button, clamp to viewport edges */
+      var left = rect.left + rect.width / 2 - mw / 2;
+      left = Math.max(MARGIN, Math.min(left, vw - mw - MARGIN));
+
+      menu.style.top  = top  + 'px';
+      menu.style.left = left + 'px';
+    }
+
+    /* Inject/re-inject the contact icon into the button (safe to call repeatedly) */
+    function ensureContactIcon(btn) {
+      if (btn.querySelector('.kc-contact-icon-wrap')) return; /* already present */
+      /* Remove any platform-specific img/svg React may have rendered */
+      Array.prototype.forEach.call(btn.querySelectorAll('img, svg'), function(el) { el.remove(); });
+      var iconWrap = document.createElement('span');
+      iconWrap.className = 'kc-contact-icon-wrap';
+      iconWrap.innerHTML = CONTACT_BTN_ICON;
+      btn.insertBefore(iconWrap, btn.firstChild);
+    }
+
+    function attachDropdown(btn) {
+      if (btn.dataset.kcDd) return;
+      btn.dataset.kcDd = '1';
+
+      ensureContactIcon(btn);
+
+      var root = document.createElement('div');
+      root.className = 'kc-dd-root';
+      btn.parentNode.insertBefore(root, btn);
+      root.appendChild(btn);
+      var menu = buildMenu();
+      document.body.appendChild(menu); /* attach to body so it isn't clipped by parents */
+
+      btn.addEventListener('click', function(e) {
+        e.preventDefault(); e.stopPropagation();
+        var isOpen = menu.classList.contains('open');
+        /* Close all open menus */
+        document.querySelectorAll('.kc-dd-menu.open').forEach(function(m){ m.classList.remove('open'); });
+        if (!isOpen) {
+          menu.classList.add('open');
+          positionMenu(root, menu);
+        }
+      });
+
+      /* Reposition on scroll/resize while open */
+      window.addEventListener('resize', function() {
+        if (menu.classList.contains('open')) positionMenu(root, menu);
+      });
+      window.addEventListener('scroll', function() {
+        if (menu.classList.contains('open')) positionMenu(root, menu);
+      }, true);
+
+      document.addEventListener('click', function(e) {
+        if (!root.contains(e.target) && !menu.contains(e.target)) {
+          menu.classList.remove('open');
+        }
+      });
+    }
+
+    function makeDirect(el) {
+      if (el.dataset.kcDd) return;
+      el.dataset.kcDd = '1';
+      el.setAttribute('href', DISCORD_URL);
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener noreferrer');
+    }
+
+    function processButtons() {
+      document.querySelectorAll('a, button').forEach(function(el) {
+        if (el.closest('.kc-dd-menu')) return;
+        var txt = (el.textContent || '').trim();
+
+        if (txt === 'Contact Me') {
+          var style = el.getAttribute('style') || '';
+          if (style.indexOf('inset') !== -1) {
+            if (!el.dataset.kcDd) {
+              if (el.tagName === 'A') el.removeAttribute('href');
+              attachDropdown(el);
+            } else {
+              /* Already wired — re-inject icon if React re-rendered and removed it */
+              ensureContactIcon(el);
+            }
+            return;
+          } else if (!el.dataset.kcDd) {
+            makeDirect(el);
+            return;
+          }
+        }
+
+        if (!el.dataset.kcDd && (txt === 'Buy Now — Contact' || (txt.startsWith('Buy Now') && !el.closest('.kc-dd-menu')))) {
+          makeDirect(el);
+        }
+      });
+    }
+
+    var obs = new MutationObserver(processButtons);
+    function init() { processButtons(); obs.observe(document.body, { childList: true, subtree: true }); }
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', init)
+      : init();
+  })();
+  </script>
+</body>
+</html>
